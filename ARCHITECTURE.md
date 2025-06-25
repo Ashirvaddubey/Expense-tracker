@@ -1,9 +1,6 @@
 # Expense Tracker – Architecture & Flow
 
-## Overview
-Expense Tracker is a fullstack web application designed for modern, secure, and user-friendly expense management. It consists of a React + TypeScript frontend, a Node.js + Express backend, and a MongoDB database. The app supports authentication, analytics, theming, and a chatbot assistant.
 
----
 
 ## 1. High-Level Architecture
 
