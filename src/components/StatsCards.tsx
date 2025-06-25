@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { DollarSign, TrendingUp, Calendar, PieChart } from 'lucide-react';
-
 interface Stats {
   totalExpenses: number;
   monthlyExpenses: number;
@@ -16,11 +15,9 @@ interface Stats {
     count: number;
   }>;
 }
-
 interface StatsCardsProps {
   stats: Stats;
 }
-
 export default function StatsCards({ stats }: StatsCardsProps) {
   const topCategory = stats.categoryBreakdown[0];
   const previousMonthExpenses = stats.monthlyTrend[stats.monthlyTrend.length - 2]?.total || 0;
@@ -28,7 +25,6 @@ export default function StatsCards({ stats }: StatsCardsProps) {
   const monthlyChange = previousMonthExpenses > 0 
     ? ((currentMonthExpenses - previousMonthExpenses) / previousMonthExpenses) * 100 
     : 0;
-
   const cards = [
     {
       title: 'Total Expenses',
@@ -74,8 +70,7 @@ export default function StatsCards({ stats }: StatsCardsProps) {
             <div className={`p-3 bg-gradient-to-r ${card.color} rounded-lg`}>
               <card.icon className="w-6 h-6 text-white" />
             </div>
-          </div>
-          
+          </div>     
           <div>
             <h3 className="text-sm font-medium text-gray-600 mb-1">{card.title}</h3>
             <p className="text-2xl font-bold text-gray-900 mb-1">{card.value}</p>
