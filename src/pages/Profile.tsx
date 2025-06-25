@@ -1,3 +1,4 @@
+// profile page having choose avatar,currency,bio and many more functionality
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import DashboardLayout from '../components/DashboardLayout';
@@ -14,7 +15,6 @@ const currencies = [
   { code: 'CAD', symbol: 'C$', name: 'Canadian Dollar' },
   { code: 'AUD', symbol: 'A$', name: 'Australian Dollar' }
 ];
-
 export default function Profile() {
   const { user, updateProfile } = useAuth();
   const [loading, setLoading] = useState(false);
@@ -25,7 +25,6 @@ export default function Profile() {
     currency: user?.currency || 'USD',
     theme: user?.theme || 'light'
   });
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -39,11 +38,9 @@ export default function Profile() {
       avatar: emoji
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-
     try {
       await updateProfile(formData);
     } catch (error) {
@@ -52,7 +49,6 @@ export default function Profile() {
       setLoading(false);
     }
   };
-
   if (!user) return null;
 
   return (
@@ -162,7 +158,6 @@ export default function Profile() {
                     {formData.bio.length}/200 characters
                   </p>
                 </div>
-
                 {/* Preferences */}
                 <div>
                   <h2 className="text-xl font-semibold text-gray-900 mb-4">Preferences</h2>
@@ -201,7 +196,6 @@ export default function Profile() {
                     </div>
                   </div>
                 </div>
-
                 {/* Save Button */}
                 <div className="flex justify-end">
                   <motion.button
