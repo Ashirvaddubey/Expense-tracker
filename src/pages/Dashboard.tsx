@@ -1,3 +1,4 @@
+// It is the dashbord page where i have use famer motion..
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import DashboardLayout from '../components/DashboardLayout';
@@ -189,7 +190,7 @@ export default function Dashboard() {
         )}
 
         {/* Chatbot */}
-        <Chatbot expenses={expenses} stats={stats} />
+        <Chatbot expenses={expenses} stats={stats} />  {/*for chatbot*/}
       </div>
     </DashboardLayout>
   );
