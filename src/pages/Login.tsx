@@ -1,9 +1,9 @@
+// Login page
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Eye, EyeOff, Wallet, Mail, Lock } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-
 export default function Login() {
   const [formData, setFormData] = useState({
     email: '',
@@ -21,7 +21,6 @@ export default function Login() {
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -43,7 +42,6 @@ export default function Login() {
       setLoading(false);
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
       <motion.div
@@ -81,7 +79,6 @@ export default function Login() {
                 />
               </div>
             </div>
-
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">
                 Password
@@ -106,7 +103,6 @@ export default function Login() {
                 </button>
               </div>
             </div>
-
             <button
               type="submit"
               disabled={loading}
@@ -115,7 +111,6 @@ export default function Login() {
               {loading ? 'Signing In...' : 'Sign In'}
             </button>
           </form>
-
           {/* Footer */}
           <div className="mt-8 text-center">
             <p className="text-gray-300">
