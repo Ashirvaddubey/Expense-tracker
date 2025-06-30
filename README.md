@@ -122,7 +122,7 @@ Linkein-https://www.linkedin.com/in/ashirvad-dubey-a43bb7253/
 
 ## 🖼️ Screenshots
 
-Showcase the app's look and feel! Replace the image links below with your own screenshots.
+Showcase the app's look and feel!.
 
 ### Registration Page
 ![Registration Screenshot](https://github.com/user-attachments/assets/4867d64f-6458-463e-903b-c6c5b2200e4c)
